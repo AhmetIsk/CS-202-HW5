@@ -54,21 +54,37 @@ the person with an id of 3 has the name of Dogan and has four friends, with the 
 
 17
 0 Ali 4 1 14 3 2
+
 1 Beril 2 0 3
+
 2 Cigdem 4 10 14 0 3
+
 3 Dogan 4 14 0 1 2
+
 4 Ebru 2 16 7
+
 5 Funda 0
+
 6 Gamze 1 11
+
 7 Hande 2 16 4
+
 8 Ibrahim 2 10 13
+
 9 Jale 4 12 11 13 10
+
 10 Kenan 5 2 13 12 8 9
+
 11 Leman 3 15 9 6
+
 12 Mahmut 3 10 9 15
+
 13 Nalan 3 9 10 8
+
 14 Okan 3 2 0 3
+
 15 Pinar 2 12 11
+
 16 Rana 2 4 7
 
 ////////////////////////////////////////
@@ -94,42 +110,73 @@ use other programs to test your implementation.
 
 //////////////////////////////////////////////////
 
-#include <iostream>
+#include <<iostream>iostream>
+  
 using namespace std;
+
 #include "FriendNet.h"
+
 int main(){
+
 FriendNet F("friends.txt");
+
 F.listFriends("Selim", 2);
+
 F.listFriends("Funda", 1);
+
 F.listFriends("Cigdem", -1);
+
 cout << endl;
+
 F.listFriends("Ibrahim", 2);
+
 F.listFriends("Ibrahim", 3);
+
 cout << endl;
+
 F.displayAverageDegrees();
+
 cout << endl;
+
 F.displayDiameters();
+
 cout << endl;
+
 return 0;
+
 }
+
 //////////////////////////////////////////////////
   
 The output of this program will be as follows:
 
 //////////////////////////////////////////////////
+
 Selim does not exist in the network.
+
 People accessible from Funda within 1 hops: NOBODY
+
 People accessible from Cigdem within -1 hops: NOBODY
+
 People accessible from Ibrahim within 2 hops: Cigdem, Jale, Kenan, Mahmut, Nalan
+
 People accessible from Ibrahim within 3 hops: Ali, Cigdem, Dogan, Jale, Kenan,
 Leman, Mahmut, Nalan, Okan, Pinar
+
 There are 3 connected components. The average degrees are:
+
 For component 0: 3.08
+
 For component 1: 2.00
+
 For component 2: 0.00
+
 There are 3 connected components. The diameters are:
+
 For component 0: 6
+
 For component 1: 1
+
 For component 2: 0
 
 ///////////////////////////////////////////////////
